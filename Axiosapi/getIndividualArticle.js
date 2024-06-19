@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const articleApi = axios.create({
-    baseURL: "https://nc-news-rss6.onrender.com/api"
+    baseUrl: "https://nc-news-rss6.onrender.com/api"
 })
 
-function getArticles() {
-    return articleApi.get("/articles")
+function getIndividualArticle() {
+    return articleApi.get(`/articles/${article_id}`)
     .then((res) => {
         console.log(res.data)
         return res.data
@@ -17,4 +17,4 @@ function getArticles() {
 };
 
 
-export default getArticles;
+export default getIndividualArticle;
