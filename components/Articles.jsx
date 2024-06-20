@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import getArticles from "../Axiosapi/getArticles.js";
 import ArticleCard from "./ArticleCard.jsx";
+import { getArticles } from "../Axiosapi/Api.js";
+
 
 const Articles = () => {
     const [articles, setArticles] = useState([])
