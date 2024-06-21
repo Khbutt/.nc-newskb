@@ -7,7 +7,6 @@ const articleApi = axios.create({
 export const getArticles = () => {
     return articleApi.get("/articles")
     .then((res) => {
-        console.log(res)
         return res.data
     })
     .catch((error) => {
@@ -17,10 +16,8 @@ export const getArticles = () => {
 };
 
 export const getIndividualArticle = (article_id) => {
-    console.log(article_id, "<<<< ARTICLE ID IN API CALL")
     return articleApi.get(`/articles/${article_id}`)
     .then((res) => {
-        console.log(res)
         return res.data
     })
     .catch((error) => {
@@ -29,4 +26,9 @@ export const getIndividualArticle = (article_id) => {
     });
 };
 
-// export default 
+export const getComments = (article_id) => {
+    return articleApi.get(`/articles/${article_id}/comments`)
+    .then(({data}) => {
+        return data.comments
+    })
+}

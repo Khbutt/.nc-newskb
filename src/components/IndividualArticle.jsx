@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getIndividualArticle } from "../Axiosapi/Api";
+import Comments from "./Comments";
+
 
 const IndividualArticle = () => {
     const [individualArticle, setIndividualArticle] = useState([])
@@ -10,7 +12,6 @@ const IndividualArticle = () => {
     useEffect(() => {
     getIndividualArticle(article_id)
     .then(( individualArticle ) => {
-        // console.log(individualArticle, '<<<< INDIVIDUAL ARTICLE')
         setIndividualArticle(individualArticle);
         setIsLoading(false);
     })
@@ -24,8 +25,9 @@ if (isLoading) {
 return (
     <section className="IndividualArticle">
         <h1>{individualArticle.article.title}</h1>
-        <p>{individualArticle.body}</p>
-        <p className="AuthorName"> Author: {individualArticle.author} </p>
+        <p>{individualArticle.article.body}</p>
+        <p className="AuthorName"> Author: {individualArticle.article.author} </p>
+        <Comments />
     </section>
 )
 }
