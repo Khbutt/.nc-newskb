@@ -1,3 +1,13 @@
+*{
+  background-color: bisque;
+}
+
+header {
+  color: black;
+  font-size: x-large;
+}
+
+
 .articles {
   list-style: none;
 }

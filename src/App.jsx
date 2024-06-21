@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 
-import Header from '../components/Header.jsx'
-import Nav from '../components/NavBar.jsx'
-import Articles from '../components/Articles.jsx'
-import IndividualArticle from '../components/IndividualArticle.jsx'
+import Header from './components/Header.jsx'
+import Nav from './components/NavBar.jsx'
+import Articles from './components/Articles.jsx'
+import IndividualArticle from './components/IndividualArticle.jsx'
 
 const App = () => {
 return (

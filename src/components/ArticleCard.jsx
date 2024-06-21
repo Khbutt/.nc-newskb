@@ -12,6 +12,8 @@ const ArticleCard = ({ article }) => {
     );
 };
 
+
+
 //return an article and maybe put border around this
 
 export default ArticleCard;
